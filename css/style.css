@@ -98,7 +98,7 @@
 
 
 body {
-  min-width: 1200px;
+  min-width: 960px;
   font-size: 18px;
   line-height: normal;
   font-family: "Cuprum", Arial, sans-serif ;
@@ -196,13 +196,10 @@ a {
 
 .main-menu {
   font-size: 18px;
-  font-family: "Cuprum", Arial, sans-serif ;
-  background-color: var(--special-darkgrey);
-}
-
-.main-menu-item {
   line-height: 24px;
   color: var(--basic-white);
+  font-family: "Cuprum", Arial, sans-serif ;
+  background-color: var(--special-darkgrey);
 }
 
 
@@ -303,23 +300,23 @@ a {
   list-style: none;
 }
 
-.promo-item:nth-child(1) {
+.materials {
   background-color: var(--special-yellow);
 }
 
-.promo-item:nth-child(2) {
+.tools {
   background-color: var(--special-blue);
 }
 
-.promo-item:nth-child(3) {
+.appliances {
   background-color: var(--special-lilac);
 }
 
-.promo-item:nth-child(4) {
+.discount {
   background-color: var(--special-greenlight);
 }
 
-.promo-item:nth-child(5) {
+.delivery {
   background-color: var(--basic-yellow);
 }
 
@@ -490,7 +487,7 @@ font-style: normal;
   list-style: none;
 }
 
-.footer-navigation-item:nth-child(1n + 6),
+.specific-item,
 .feedback-link  {
   color: var(--special-yellowlight);
 }

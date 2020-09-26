@@ -149,10 +149,6 @@ a {
 }
 
 .logo {
-  font-size: 18px;
-  color: var(--basic-white);
-  text-transform: uppercase;
-  text-align: center;
   background-color: var( --basic-red);
 }
 
@@ -219,7 +215,6 @@ a {
 }
 
 .header-logo:active {
-  color: var(--basic-white);
   background-color: var( --special-darkred);
 }
 
@@ -619,8 +614,8 @@ a {
   text-decoration: none;
 }
 
-.ascending,
-.descending {
+.sort-ascending-button,
+.sort-descending-button {
   background-color: inherit;
   text-decoration: none;
   opacity: 1;
@@ -658,8 +653,8 @@ color: var(--special-silverlight);
   opacity: 0.5;
 }
 
-.specific-item,
-.feedback-link  {
+.special-navigation-item,
+.feedback-link {
   color: var(--special-yellowlight);
 }
 

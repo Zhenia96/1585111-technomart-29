@@ -236,7 +236,7 @@ a {
 .main-menu-layout {
   display: grid;
   grid-template-columns: 220px 1fr 150px 150px 150px;
-  grid-template-rows: 42px;
+  grid-template-rows: minmax(42px, auto);
 }
 
 .header-logo:active {
@@ -406,13 +406,13 @@ a {
   background-color: var(--special-grey);
 }
 
-.header-navigation-layout { /* временно*/
+.header-navigation-layout {
   display: grid;
   grid-template-columns: repeat(7, auto);
   grid-template-rows: auto;
 }
 
-.header-navigation-item { /* Временно*/
+.header-navigation-item {
   font-size: 18px;
   line-height: 24px;
   text-align: center;
@@ -423,11 +423,11 @@ a {
   margin: 0;
 }
 
-.header-navigation-item:first-child { /* Временно*/
+.header-navigation-item:first-child {
   padding-left: 53px;
 }
 
-.header-navigation-item:last-child  { /* Временно*/
+.header-navigation-item:last-child  {
   padding-right: 53px;
 }
 
@@ -610,13 +610,6 @@ a {
   margin-top: 59px;
 }
 
-.products-layout {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 89px 1fr;
-  grid-gap: 20px;
-}
-
 .breadcrumbs-list {
   grid-column: 1 / -1;
   grid-row: 1 / 2;
@@ -643,12 +636,11 @@ a {
 }
 
 .products-list {
-  grid-column: 1 / -1;
-  grid-row: 2 / 3;
-
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
+
+  margin-top: 20px;
 }
 
 .inner-page .products-list-layout {
@@ -765,14 +757,13 @@ a {
 
 .current-price {
   font-size: 17px;
+  line-height: 18px;
   font-weight: bold;
   font-family: "PT Sans", Arial, sans-serif;
   background-color: var(--basic-red);
 
   width: 141px;
-  height: 38px;
-  padding: 0px;
-  box-sizing: border-box;
+  padding: 10px 0px;
   margin-top: auto;
   margin-bottom: 21px;
 }
@@ -841,14 +832,7 @@ a {
 
 
 .manufacturers {
-  margin-top: 70px;;
-}
-
-.manufacturers-layout {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 89px 1fr;
-  grid-gap: 20px;
+  margin-top: 70px;
 }
 
 .manufacturers .title-container {
@@ -863,8 +847,7 @@ a {
 }
 
 .manufacturers-list {
-  grid-column: 1 / -1;
-  grid-row: 2 / 3;
+  margin-top: 20px;
 }
 
 .manufacturers-list-layout {
@@ -1205,8 +1188,8 @@ a {
 
 .social-list-layout {
   display: grid;
-  grid-template-columns: repeat(3, 44px);
-  grid-template-rows: 44px;
+  grid-template-columns: repeat(3, minmax(44px, auto));
+  grid-template-rows: auto;
   grid-gap: 1px;
 
   margin:34px 118px 29px 161px;

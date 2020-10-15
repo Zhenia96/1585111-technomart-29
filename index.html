@@ -16,15 +16,13 @@
         <a href="#" class="logo header-logo"><img src="img/content/logo-technomart.svg" width="108" height="18"
             alt="Логотип магазина Техномарт"></a>
         <form class="search" method="get" action="">
-          <input class="search-button" type="search" name="search">
-          <span>Поиск:</span>
-          <button class="main-menu-search-submit" type="submit">
-            <svg width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="main-menu-search-submit-image" fill-rule="evenodd" clip-rule="evenodd"
-                d="M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z"
-                fill="#fff" />
-            </svg>
-          </button>
+          <label class="visually-hidden" for="search-button">Поиск товара</label>
+          <input class="search-button" id="search-button" type="search" name="search" placeholder="Поиск:">
+          <svg class="search-icon" width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="search-icon-color" fill-rule="evenodd" clip-rule="evenodd"
+              d="M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z"
+              fill="#fff" />
+          </svg>
         </form>
         <a class="bookmark" href="">Закладки: 0</a>
         <a class="cart" href="">Корзина: 0</a>
@@ -96,6 +94,7 @@
             <figcaption class="promo-slider-caption">
               <p>Перфораторы<br>
                 Настоящие мужские игрушки</p>
+              <a class="button main-page-button promo-slider-button" href="">Открыть каталог</a>
             </figcaption>
             <img class="promo-slider-image" width="620" height="266" src="img/content/slider/Layer99.jpg"
               alt="Строитель работает с перфоратором">
@@ -104,6 +103,7 @@
             <figcaption class="promo-slider-caption">
               <p>Дрели<br>
                 Соседям на радость!</p>
+              <a class="button main-page-button promo-slider-button" href="">Открыть каталог</a>
             </figcaption>
             <img class="promo-slider-image" width="620" height="266" src="img/content/slider/Layer98.jpg"
               alt="Строитель работает с дрелью">
@@ -114,7 +114,6 @@
             <button class="slider-button slider-button-next" type="button"><img widht="22px" height="43.5px"
                 src="img/decor/icon-right-small.svg" alt="Следующий"></button>
           </div>
-          <a class="button main-page-button promo-slider-button" href="">Открыть каталог</a>
           <div class="promo-slider-pagination">
             <div class="promo-slider-pagination-item"></div>
             <div class="promo-slider-pagination-item current-pagination-item"></div>

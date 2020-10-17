@@ -779,12 +779,13 @@ a {
   right: 2px;
 
   content: "";
-  background-image: url("../img/decor/icon-right-small.svg");
+  background-image: url("../img/decor/grey-icon-right-small.svg");
   background-repeat: no-repeat;
 
   width: 8px;
   height: 12px;
 }
+
 
 /* Promo block */
 

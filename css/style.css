@@ -315,7 +315,8 @@ a {
   flex-wrap: wrap;
 }
 
-.main-menu-wrapper > * {
+.main-menu-wrapper > form,
+.main-menu-wrapper > a {
   min-height: 42px;
 }
 
@@ -1349,7 +1350,7 @@ a {
   grid-row: 1 / 2;
 }
 
-.services .title {
+.services h2 {
   font-size: 30px;
   line-height: 30px;
   font-family: "Cuprum", Arial, sans-serif;
@@ -1610,7 +1611,7 @@ a {
 .contacts img {
   display: flex;
   min-height: 158px;
-  margin-bottom: 1px;
+  margin-bottom: 23px;
 }
 
 .contacts-button {
@@ -1964,7 +1965,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   color: var(--basic-background);
-  margin: 37px -60px 0px 69px;
+  margin: 37px -1px 0px 10px;
 }
 
 .special-navigation {
@@ -1974,7 +1975,7 @@ a {
 }
 
 .footer-navigation li {
-  margin-right: 59px;
+  margin-left: 59px;
 }
 
 .footer-navigation li:hover,
@@ -2069,6 +2070,8 @@ a {
   position: absolute;
   width: 25px;
   height: 25px;
+  background-color: transparent;
+  border: none;
   cursor: pointer;
 }
 

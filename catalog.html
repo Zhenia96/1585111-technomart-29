@@ -39,7 +39,7 @@
         <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
         <address class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
       </div>
-      <div class="user-menu login-menu current-menu">
+      <div class="user-menu login-menu">
         <a class="login-button login-button-sign-in" href="">
           <svg class="icon-sign-in" width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14.88 8.5L6 0v6H0v5h6v6l8.88-8.5z" fill="#C5C5C5" />
@@ -51,7 +51,7 @@
         </a>
         <a class="login-button login-button-registration" href="">Регистрация</a>
       </div>
-      <div class="user-menu activatied-user-menu">
+      <div class="user-menu activatied-user-menu current-menu">
         <div class="user-profile-container">
           <a class="user-profile" href="">
             <svg class="user-icon" width="20" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -92,10 +92,10 @@
   <main class="inner-page-content">
     <div class="container inner-page-layout">
       <ul class="list breadcrumbs-list">
-        <li class="breadcrumbs-item" aria-label="На главную страницу"><a class="home" href="index.html"></a></li>
-        <li class="breadcrumbs-item"><a href="">Каталог</a></li>
-        <li class="breadcrumbs-item"><a href="">Инструмент</a></li>
-        <li class="breadcrumbs-item"><a href="">Перфораторы</a></li>
+        <li aria-label="На главную страницу"><a class="home" href="index.html"></a></li>
+        <li><a href="">Каталог</a></li>
+        <li><a href="">Инструмент</a></li>
+        <li><a href="">Перфораторы</a></li>
       </ul>
 
       <h1 class="title products-main-title">Перфораторы</h1>
@@ -312,16 +312,16 @@
           </li>
         </ul>
         <ul class="list products-pagination">
-          <li class="products-pagination-item">
+          <li>
             <button class="products-pagination-button current-button" type="button">1</button>
           </li>
-          <li class="products-pagination-item">
+          <li>
             <button class="products-pagination-button" type="button">2</button>
           </li>
-          <li class="products-pagination-item">
+          <li>
             <button class="products-pagination-button" type="button">3</button>
           </li>
-          <li class="products-pagination-item">
+          <li class="pagination-next">
             <button class="products-pagination-button button-next" type="button">Следующая</button>
           </li>
         </ul>
@@ -331,7 +331,7 @@
     <article class="about-products">
       <div class="container">
         <h2 class="title about-products-title">Пара слов о перфораторах</h2>
-        <p class="about-products-content">Перфоратор &ndash; универсальный строительный инструмент. Предназначен для
+        <p>Перфоратор &ndash; универсальный строительный инструмент. Предназначен для
           сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
           Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели,
           шуруповерта и отбойного молотка.<br>
@@ -409,6 +409,15 @@
       </div>
     </div>
   </footer>
+
+  <section class="modal modal-container modal-notice">
+    <h2 class="title">Товар добавлен в корзину!</h2>
+    <div class="button-container">
+      <a class="button main-page-button modal-notice-order">Оформить заказ</a>
+      <button class="button modal-notice-continue">Продолжить покупки</button>
+    </div>
+    <button class="close" type="button" aria-label="Закрыть"></button>
+  </section>
 
 </body>
 

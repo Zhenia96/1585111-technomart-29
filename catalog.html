@@ -19,7 +19,8 @@
           <form class="search" method="get" action="https://echo.htmlacademy.ru/">
             <label class="visually-hidden" for="search-button">Поиск товара</label>
             <input class="search-button" id="search-button" type="search" name="search" placeholder="Поиск:">
-            <svg class="search-icon" width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg aria-hidden="true" focusable="false" class="search-icon" width="17" height="17" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <path class="search-icon-color" fill-rule="evenodd" clip-rule="evenodd"
                 d="M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z"
                 fill="#fff" />
@@ -36,12 +37,15 @@
         строительных материалов<br>и
         инструментов для ремонта</h1>
       <div class="header-contacts">
-        <a class="header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
-        <address class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+        <a class="header-phone" href="tel:+78125550555"><span class="visually-hidden">Наш номер телефона:</span>+7 (812)
+          555-05-55</a>
+        <address class="header-address"><span class="visually-hidden">Наш адрес:</span>г. Санкт-Петербург, ул.
+          Б.Конюшенная, д. 19/8</address>
       </div>
       <div class="user-menu login-menu">
-        <a class="login-button login-button-sign-in" href="">
-          <svg class="icon-sign-in" width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <a class="login-button login-button-sign-in" href="" aria-label="Войти в аккаунт">
+          <svg aria-hidden="true" focusable="false" class="icon-sign-in" width="20" height="17" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
             <path d="M14.88 8.5L6 0v6H0v5h6v6l8.88-8.5z" fill="#C5C5C5" />
             <path
               d="M16.99 15.01h-5.03V17h5.03c2.17 0 3-1.81 3.03-3.03V3.03C19.98 1.8 19.16 0 16.98 0h-5.03v1.99h5.03c.84 0 .99.68 1 1.06v10.9c-.01.38-.16 1.06-1 1.06z"
@@ -62,7 +66,8 @@
             <span class="user-name">Равшан Джамшутович</span>
           </a>
           <button class="log-out" type="button" aria-label="Выйти из аккаунта">
-            <svg width="20" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg aria-hidden="true" focusable="false" width="20" height="18" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <path d="M20 9L11.12.5v6h-6v5h6v6L20 9z" fill="#C5C5C5" />
               <path
                 d="M2.1 14.45V3.55c.02-.38.18-1.06 1.02-1.06h5.02V.5H3.12C.94.5.12 2.31.09 3.53v10.94C.1 15.7.94 17.5 3.12 17.5h5.02v-1.99H3.12c-.84 0-1-.68-1.01-1.06z"
@@ -109,14 +114,16 @@
               <div class="filter-scale">
                 <div class="bar" style="width: 73%; margin-left: 8%;"></div>
               </div>
-              <div class="toggle toggle-min" style="left:8%" tabindex="0"></div>
-              <div class="toggle toggle-max" style="left:73%" tabindex="0"></div>
+              <div class="toggle toggle-min" style="left:8%" tabindex="0"><span class="visually-hidden">Переключатель
+                  минимальной цены</span></div>
+              <div class="toggle toggle-max" style="left:73%" tabindex="0"><span class="visually-hidden">Переключатель
+                  максимальной цены</span></div>
             </div>
             <div class="price-control">
-              <label class="visually-hidden"></label>
+              <label class="visually-hidden">Минимальная цена</label>
               <input class="min-price" type="number" name="minPrice" value="0" min="0">
               <span>&ndash;</span>
-              <label class="visually-hidden"></label>
+              <label class="visually-hidden">Максимальная цена</label>
               <input class="min-price" type="number" name="maxPrice" value="30000" min="0">
             </div>
           </fieldset>
@@ -179,9 +186,9 @@
             <button class="sort-button" type="button">По функционалу</button>
           </li>
           <li class="sort-item group">
-            <button class="sort-button sort-ascending-button" type="button">&#9650;<span hidden>Сортировка по
+            <button class="sort-button sort-ascending-button" type="button">&#9650;<span class="visually-hidden">По
                 возрастанию</span></button>
-            <button class="sort-button sort-descending-button" type="button">&#9660;<span hidden>Сортировка по
+            <button class="sort-button sort-descending-button" type="button">&#9660;<span class="visually-hidden">По
                 убыванию</span></button>
           </li>
         </ul>
@@ -193,10 +200,12 @@
           <li class="products-item products-item-option-3">
             <div class="products-item-header">
               <img class="products-image" width="144" height="128" src="img/content/products/snippet-945.jpg"
-                alt="BOSCH BFG 6000">
+                alt="Перфоратор с средней длины сверлом и толстой рукояткой">
               <div class="products-item-button-container">
-                <button class="button button-buy" type="button">Купить</button>
-                <button class="button button-to-bookmark" type="button">В Закладки</button>
+                <button class="button button-buy" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 6000 в корзину">Купить</button>
+                <button class="button button-to-bookmark" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 6000 в закладки">В Закладки</button>
               </div>
             </div>
             <h3 class="title products-title">Перфоратор BOSCH BFG 6000</h3>
@@ -206,10 +215,12 @@
           <li class="products-item products-item-option-3">
             <div class="products-item-header">
               <img class="products-image" width="144" height="128" src="img/content/products/snippet-945.jpg"
-                alt="BOSCH BFG 6000">
+                alt="Перфоратор с средней длины сверлом и толстой рукояткой">
               <div class="products-item-button-container">
-                <button class="button button-buy" type="button">Купить</button>
-                <button class="button button-to-bookmark" type="button">В Закладки</button>
+                <button class="button button-buy" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 6000 в корзину">Купить</button>
+                <button class="button button-to-bookmark" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 6000 в закладки">В Закладки</button>
               </div>
             </div>
             <h3 class="title products-title">Перфоратор BOSCH BFG 6000</h3>
@@ -219,10 +230,12 @@
           <li class="products-item products-item-option-3">
             <div class="products-item-header products-item-option-3">
               <img class="products-image" width="144" height="128" src="img/content/products/snippet-945.jpg"
-                alt="BOSCH BFG 6000">
+                alt="Перфоратор с средней длины сверлом и толстой рукояткой">
               <div class="products-item-button-container">
-                <button class="button button-buy" type="button">Купить</button>
-                <button class="button button-to-bookmark" type="button">В Закладки</button>
+                <button class="button button-buy" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 6000 в корзину">Купить</button>
+                <button class="button button-to-bookmark" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 6000 в закладки">В Закладки</button>
               </div>
             </div>
             <h3 class="title products-title">Перфоратор BOSCH BFG 6000</h3>
@@ -233,10 +246,12 @@
           <li class="products-item products-item-option-2">
             <div class="products-item-header">
               <img class="products-image" width="127" height="112" src="img/content/products/snippet-18927.jpg"
-                alt="BOSCH BFG 3000">
+                alt="Перфоратор с узким коротким сверлом и толстой рукояткой">
               <div class="products-item-button-container">
-                <button class="button button-buy" type="button">Купить</button>
-                <button class="button button-to-bookmark" type="button">В Закладки</button>
+                <button class="button button-buy" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 3000 в корзину">Купить</button>
+                <button class="button button-to-bookmark" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 3000 в закладки">В Закладки</button>
               </div>
             </div>
             <h3 class="title products-title">Перфоратор BOSCH BFG 3000</h3>
@@ -247,10 +262,12 @@
           <li class="products-item products-item-option-3">
             <div class="products-item-header">
               <img class="products-image" width="144" height="128" src="img/content/products/snippet-945.jpg"
-                alt="BOSCH BFG 6000">
+                alt="Перфоратор с средней длины сверлом и толстой рукояткой">
               <div class="products-item-button-container">
-                <button class="button button-buy" type="button">Купить</button>
-                <button class="button button-to-bookmark" type="button">В Закладки</button>
+                <button class="button button-buy" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 6000 в корзину">Купить</button>
+                <button class="button button-to-bookmark" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 6000 в закладки">В Закладки</button>
               </div>
             </div>
             <h3 class="title products-title">Перфоратор BOSCH BFG 6000</h3>
@@ -260,10 +277,12 @@
           <li class="products-item products-item-option-2">
             <div class="products-item-header">
               <img class="products-image" width="127" height="112" src="img/content/products/snippet-18927.jpg"
-                alt="BOSCH BFG 2000">
+                alt="Перфоратор с узким коротким сверлом и толстой рукояткой">
               <div class="products-item-button-container">
-                <button class="button button-buy" type="button">Купить</button>
-                <button class="button button-to-bookmark" type="button">В Закладки</button>
+                <button class="button button-buy" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 2000 в корзину">Купить</button>
+                <button class="button button-to-bookmark" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 2000 в закладки">В Закладки</button>
               </div>
             </div>
             <h3 class="title products-title">Перфоратор BOSCH BFG 2000</h3>
@@ -273,10 +292,12 @@
           <li class="products-item products-item-option-2">
             <div class="products-item-header">
               <img class="products-image" width="127" height="112" src="img/content/products/snippet-18927.jpg"
-                alt="BOSCH BFG 3000">
+                alt="Перфоратор с узким коротким сверлом и толстой рукояткой">
               <div class="products-item-button-container">
-                <button class="button button-buy" type="button">Купить</button>
-                <button class="button button-to-bookmark" type="button">В Закладки</button>
+                <button class="button button-buy" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 3000 в корзину">Купить</button>
+                <button class="button button-to-bookmark" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 3000 в закладки">В Закладки</button>
               </div>
             </div>
             <h3 class="title products-title">Перфоратор BOSCH BFG 3000</h3>
@@ -287,10 +308,12 @@
           <li class="products-item products-item-option-3">
             <div class="products-item-header">
               <img class="products-image" width="144" height="128" src="img/content/products/snippet-945.jpg"
-                alt="BOSCH BFG 6000">
+                alt="Перфоратор с средней длины сверлом и толстой рукояткой">
               <div class="products-item-button-container">
-                <button class="button button-buy" type="button">Купить</button>
-                <button class="button button-to-bookmark" type="button">В Закладки</button>
+                <button class="button button-buy" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 6000 в корзину">Купить</button>
+                <button class="button button-to-bookmark" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 6000 в закладки">В Закладки</button>
               </div>
             </div>
             <h3 class="title products-title">Перфоратор BOSCH BFG 6000</h3>
@@ -300,10 +323,12 @@
           <li class="products-item products-item-option-2">
             <div class="products-item-header">
               <img class="products-image" width="127" height="112" src="img/content/products/snippet-18927.jpg"
-                alt="BOSCH BFG 2000">
+                alt="Перфоратор с узким коротким сверлом и толстой рукояткой">
               <div class="products-item-button-container">
-                <button class="button button-buy" type="button">Купить</button>
-                <button class="button button-to-bookmark" type="button">В Закладки</button>
+                <button class="button button-buy" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 2000 в корзину">Купить</button>
+                <button class="button button-to-bookmark" type="button"
+                  aria-label="Добавить перфоратор BOSCH BFG 2000 в закладки">В Закладки</button>
               </div>
             </div>
             <h3 class="title products-title">Перфоратор BOSCH BFG 2000</h3>
@@ -347,8 +372,10 @@
       <a class="logo main-footer-logo" href="index.html"><img src="img/content/footer-logo.svg" width="138" height="23"
           alt="Логотип магазина Техномарт"></a>
       <div class="footer-contacts">
-        <address class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-        <a class="footer-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+        <address class="footer-address"><span class="visually-hidden">Наш адрес:</span>г. Санкт-Петербург, ул. Б.
+          Конюшенная, д. 19/8</address>
+        <a class="footer-phone" href="tel:+78125550555"><span class="visually-hidden">Наш номер телефона:</span>+7 (812)
+          555-05-55</a>
       </div>
       <ul class="list footer-navigation">
         <li class="footer-navigation-item"><a href="">Компания</a></li>
@@ -369,9 +396,11 @@
         <p class="copyright">© 2010–2019 Компания «Техномарт»<br>
           Все права защищены</p>
         <ul class="list social-list">
-          <li class="social-item" aria-label="Мы в Вконтакте">
+          <li class="social-item">
+            <span class="visually-hidden">Мы в Вконтакте</span>
             <a href="">
-              <svg width="44" height="44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg aria-hidden="true" focusable="false" width="44" height="44" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <path class="social-item-background" fill-rule="evenodd" clip-rule="evenodd"
                   d="M22.16 1.48c11.5 0 20.8 9.1 20.8 20.34 0 11.23-9.3 20.33-20.8 20.33-11.49 0-20.8-9.1-20.8-20.33 0-11.23 9.31-20.34 20.8-20.34z"
                   fill="#212A3A" />
@@ -381,18 +410,22 @@
               </svg>
             </a>
           </li>
-          <li class="social-item" aria-label="Мы в Фэйсбуке">
+          <li class="social-item">
+            <span class="visually-hidden">Мы в Фэйсбуке</span>
             <a href="">
-              <svg width="44" height="44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg aria-hidden="true" focusable="false" width="44" height="44" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <path class="social-item-background" fill-rule="evenodd" clip-rule="evenodd"
                   d="M21.9 1.48a20.33 20.33 0 110 40.67 20.33 20.33 0 010-40.67z" fill="#212A3A" />
                 <path d="M28 15v-4h-4a4 4 0 00-4 4v4h-4v4h4v10h4V23h4v-4h-4v-4h4z" fill="#fff" />
               </svg>
             </a>
           </li>
-          <li class="social-item" aria-label="Мы в Инстаграме">
+          <li class="social-item">
+            <span class="visually-hidden">Мы в Инстаграме</span>
             <a href="">
-              <svg width="44" height="44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg aria-hidden="true" focusable="false" width="44" height="44" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <path class="social-item-background" fill-rule="evenodd" clip-rule="evenodd"
                   d="M21.9 1.48a20.33 20.33 0 110 40.67 20.33 20.33 0 010-40.67z" fill="#212A3A" />
                 <path fill-rule="evenodd" clip-rule="evenodd"

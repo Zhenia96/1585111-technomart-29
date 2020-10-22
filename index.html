@@ -159,7 +159,7 @@
           <p class="deleted-price"><del>32500 Р.</del></p>
           <p class="current-price">25500 Р.</p>
         </li>
-        <li class=" products-item products-item-option-2">
+        <li class="products-item products-item-option-2">
           <div class="products-item-header">
             <img class="products-image" width="127" height="112" src="img/content/products/snippet-18927.jpg"
               alt="BOSCH BFG 3000">
@@ -186,7 +186,7 @@
           <p class="deleted-price"><del>30500 Р.</del></p>
           <p class="current-price">25500 Р.</p>
         </li>
-        <li class=" products-item products-item-option-2">
+        <li class="products-item products-item-option-2">
           <div class="products-item-header">
             <img class="products-image" width="127" height="112" src="img/content/products/snippet-18927.jpg"
               alt="BOSCH BFG 2000">
@@ -312,7 +312,7 @@
         <p>Вы можете забрать товар сами,<br>
           заехав в наш офис:</p>
         <a class="contacts-image" href=""><img width="300" height="158" src="img/content/minimap.jpg"
-            alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></a><br>
+            alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></a>
         <a class="button main-page-button contacts-button" href="">Заблудились? Напишите нам!</a>
       </section>
     </div>
@@ -345,7 +345,8 @@
         <p class="copyright">© 2010–2019 Компания «Техномарт»<br>
           Все права защищены</p>
         <ul class="list social-list">
-          <li class="social-item" aria-label="Мы в Вконтакте">
+          <li class="social-item">
+            <span class="visually-hidden">Мы в Вконтакте</span>
             <a href="">
               <svg width="44" height="44" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="social-item-background" fill-rule="evenodd" clip-rule="evenodd"
@@ -357,7 +358,8 @@
               </svg>
             </a>
           </li>
-          <li class="social-item" aria-label="Мы в Фэйсбуке">
+          <li class="social-item">
+            <span class="visually-hidden">Мы в Фэйсбуке</span>
             <a href="">
               <svg width="44" height="44" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="social-item-background" fill-rule="evenodd" clip-rule="evenodd"
@@ -366,7 +368,8 @@
               </svg>
             </a>
           </li>
-          <li class="social-item" aria-label="Мы в Инстаграме">
+          <li class="social-item">
+            <span class="visually-hidden">Мы в Инстаграме</span>
             <a href="">
               <svg width="44" height="44" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="social-item-background" fill-rule="evenodd" clip-rule="evenodd"
@@ -385,37 +388,47 @@
       </div>
     </div>
   </footer>
+
+  <section class="modal .modal-container modal-write-us">
+    <h2 class="visually-hidden">Напиши нам</h2>
+    <form method="POST" action="https://echo.htmlacademy.ru/">
+      <ul>
+        <li>
+          <label for="write-us-name">Ваше имя:</label>
+          <input id="write-us-name" type="text" name="userName" placeholder="Имя Фамилия">
+        </li>
+        <li>
+          <label for="write-us-email">Ваш e-mail:</label>
+          <input id="write-us-email" type="email" name="userEmail" placeholder="email@example.com">
+        </li>
+        <li class="user-letter">
+          <label for="write-us-text">Текст письма:</label>
+          <textarea id="write-us-text" name="text" placeholder="В свободной форме"></textarea>
+        </li>
+      </ul>
+      <button class="button submit" type="submit">Отправить</button>
+    </form>
+    <button class="close" type="button" aria-label="Закрыть"></button>
+  </section>
+
+  <section class="modal modal-map">
+    <h2 class="visually-hidden">Мы на карте</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124054!2d30.320894616211245!3d59.9387968690478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sby!4v1603122074464!5m2!1sru!2sby"
+      width="940" height="440" allowfullscreen
+      title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
+    <button class="close" type="button" aria-label="Закрыть"></button>
+  </section>
+
+  <section class="modal modal-container modal-notice">
+    <h2 class="title">Товар добавлен в корзину!</h2>
+    <div class="button-container">
+      <a class="button main-page-button modal-notice-order">Оформить заказ</a>
+      <button class="button modal-notice-continue">Продолжить покупки</button>
+    </div>
+    <button class="close" type="button" aria-label="Закрыть"></button>
+  </section>
+
 </body>
-
-<section class="modal modal-write-us">
-  <h2 class="visually-hidden">Напиши нам</h2>
-  <form method="POST" action="https://echo.htmlacademy.ru/">
-    <ul>
-      <li>
-        <label for="write-us-name">Ваше имя:</label>
-        <input id="write-us-name" type="text" name="userName" placeholder="Имя Фамилия">
-      </li>
-      <li>
-        <label for="write-us-email">Ваш e-mail:</label>
-        <input id="write-us-email" type="email" name="userEmail" placeholder="email@example.com">
-      </li>
-      <li class="user-letter">
-        <label for="write-us-text">Текст письма:</label>
-        <textarea id="write-us-text" name="text" placeholder="В свободной форме"></textarea>
-      </li>
-    </ul>
-    <button class="button submit" type="submit">Отправить</button>
-  </form>
-  <div class="close"></div>
-</section>
-
-<section class="modal modal-map">
-  <h2 class="visually-hidden">Мы на карте</h2>
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124054!2d30.320894616211245!3d59.9387968690478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sby!4v1603122074464!5m2!1sru!2sby"
-    width="940" height="440" allowfullscreen
-    title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
-  <div class="close"></div>
-</section>
 
 </html>

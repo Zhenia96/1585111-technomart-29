@@ -207,6 +207,7 @@ a {
   background-image: linear-gradient(45deg, transparent 52%, var(--basic-red) 52%, var(--basic-red) 82%, transparent 82%);
   min-width: 70px;
   min-height: 70px;
+  z-index: -2;
 }
 
 .new em {
@@ -244,12 +245,12 @@ a {
   box-sizing: border-box;
 }
 
-.main-page-button:hover {
+.main-page-button:hover,
+.main-page-button:focus {
   background-color: var(--special-red);
 }
 
-.main-page-button:active,
-.main-page-button:focus {
+.main-page-button:active {
   background-color: var(--special-darkred);
 }
 
@@ -382,8 +383,7 @@ a {
   padding-left: 49px;
 }
 
-.bookmark:active,
-.bookmark:focus {
+.bookmark:active {
   color: var(--special-greylight);
   background-color: var(--special-black);
 }
@@ -400,8 +400,7 @@ a {
   height: 16px;
 }
 
-.cart:active,
-.cart:focus {
+.cart:active {
   color: var(--special-greylight);
 }
 
@@ -418,14 +417,14 @@ a {
 }
 
 .bookmark:hover::after,
-.cart:hover::after {
+.bookmark:focus::after,
+.cart:hover::after,
+.cart:focus::after {
   opacity: 1;
 }
 
 .bookmark:active::after,
-.bookmark:focus::after,
-.cart:active::after,
-.cart:focus::after {
+.cart:active::after {
   opacity: 0.3;
 }
 
@@ -437,12 +436,12 @@ a {
   box-sizing: border-box;
 }
 
-.order:hover {
+.order:hover,
+.order:focus  {
   background-color: var(--success);
 }
 
-.order:active,
-.order:focus {
+.order:active {
   color: var(--special-greylight);
   background-color: var(--basic-green);
 }
@@ -500,7 +499,6 @@ a {
 }
 
 .header-address {
-  align-self: flex-start;
   font-size: 14px;
   font-style: normal;
   color: var(--special-grey);
@@ -534,14 +532,11 @@ a {
 
 .user-profile {
   display: flex;
+  margin-top: 13px;
 }
 
 .user-profile:active {
   color: var(--basic-greylight);
-}
-
-.user-icon {
-  margin-top: 13px;
 }
 
 .user-profile:hover path,
@@ -556,7 +551,6 @@ a {
 .user-name {
   font-size: 21px;
   line-height: 21px;
-  margin-top: 13px;
   margin-left: 21px;
 }
 
@@ -589,7 +583,7 @@ a {
 }
 
 .user-menu-list li:hover,
-.user-menu-list li:focus {
+.user-menu-list li:focus-within {
   color: var(--basic-red);
 }
 
@@ -615,11 +609,11 @@ a {
 }
 
 .user-menu-list li:hover::after,
-.user-menu-list li:focus::after {
+.user-menu-list li:focus-within::after {
   background-color: var(--basic-red);
 }
 
-.user-menu-list li:active::after {
+.user-menu-list a:active::after {
   background-color: var(--basic-greylight);
 }
 
@@ -634,12 +628,12 @@ a {
   margin-left: 10px;
 }
 
-.login-button:hover {
+.login-button:hover,
+.login-button:focus  {
   color: var(--basic-red);
 }
 
-.login-button:active,
-.login-button:focus {
+.login-button:active {
   color: var(--basic-greylight);
 }
 
@@ -654,12 +648,12 @@ a {
   margin-right: 6px;
 }
 
-.login-button-sign-in:hover path {
+.login-button-sign-in:hover path,
+.login-button-sign-in:focus path {
   fill: var(--basic-grey);
 }
 
-.login-button-sign-in:active path,
-.login-button-sign-in:focus path {
+.login-button-sign-in:active path {
   fill: var(--basic-greylight);
 }
 
@@ -699,12 +693,12 @@ a {
   padding-right: 53px;
 }
 
-.main-navigation li:hover {
+.main-navigation li:hover,
+.main-navigation li:focus-within {
   background-color: var(--special-darkgrey);
 }
 
-.main-navigation li:active,
-.main-navigation li:focus  {
+.main-navigation li:active {
   color: var(--special-greylight);
   background-color: var(--special-dark);
 }
@@ -804,12 +798,12 @@ a {
   margin-bottom: 21px;
 }
 
-.promo-list-button:hover {
+.promo-list-button:hover,
+.promo-list-button:focus {
   background-color: var(--special-greylight-button);
 }
 
-.promo-list-button:active,
-.promo-list-button:focus {
+.promo-list-button:active {
   background-color: var(--special-grey-button);
 }
 
@@ -1042,7 +1036,8 @@ a {
   margin-bottom: -2px;
 }
 
-.products-list > li:hover {
+.products-list > li:hover,
+.products-list > li:focus-within {
   box-shadow: 0px 4px 20px var(--basic-darkgrey);
 }
 
@@ -1072,7 +1067,8 @@ a {
   margin-left: -10px;
 }
 
-.products-list > li:hover img {
+.products-list > li:hover img,
+.products-list > li:focus-within img {
   display: none;
 }
 
@@ -1087,7 +1083,8 @@ a {
   opacity: 0;
 }
 
-.products-list > li:hover .products-item-button-container {
+.products-list > li:hover .products-item-button-container,
+.products-list > li:focus-within .products-item-button-container {
   opacity: 1;
 }
 
@@ -1122,13 +1119,13 @@ a {
   opacity: 0.3;
 }
 
-.button-buy:hover {
+.button-buy:hover,
+.button-buy:focus {
   background-color: var(--success);
   border-color: var(--success);
 }
 
-.button-buy:active,
-.button-buy:focus {
+.button-buy:active {
   background-color: var(--special-darkgreen);
   border-color: var(--special-darkgreen);
 }
@@ -1140,13 +1137,13 @@ a {
   border: 3px solid var(--basic-green);
 }
 
-.button-to-bookmark:hover {
+.button-to-bookmark:hover,
+.button-to-bookmark:focus {
   color: var(--special-grey);
   border-color: var(--special-grey);
 }
 
-.button-to-bookmark:active,
-.button-to-bookmark:focus {
+.button-to-bookmark:active {
   color: var(--special-grey);
   border-color: var(--special-grey);
   opacity: 0.3;
@@ -1323,12 +1320,12 @@ a {
   display: block;
 }
 
-.manufacturers-list li:hover {
+.manufacturers-list li:hover,
+.manufacturers-list li:focus-within {
   box-shadow: 0px 4px 20px var(--basic-darkgrey);
 }
 
-.manufacturers-list li:active,
-.manufacturers-list li:focus {
+.manufacturers-list li:active {
   box-shadow: 0px 4px 20px var(--basic-darkgrey);
   opacity: 0.5;
 }
@@ -1413,14 +1410,14 @@ a {
   box-sizing: border-box;
 }
 
-.services-button:hover {
+.services-button:hover,
+.services-button:focus {
   background-color: var(--special-darkgrey);
   box-shadow: inset 0px 1px 0px var(--basic-brightnavy),
   inset 0px 0px 0px var(--special-darkgrey);
 }
 
-.services-button:active,
-.services-button:focus {
+.services-button:active {
   color: var(--special-grey);
   background-color: var(--basic-white);
   box-shadow: none;
@@ -1612,10 +1609,16 @@ a {
   margin-bottom: 34px;
 }
 
-.contacts img {
+.contacts button {
+  border: none;
+}
+
+.contacts .contacts-map {
   display: flex;
   min-height: 158px;
+  padding: 0px;
   margin-bottom: 23px;
+  cursor: pointer;
 }
 
 .contacts-button {
@@ -1758,7 +1761,7 @@ a {
 }
 
 .checkbox-item:hover .filter-checkbox::before,
-.checkbox-item:focus .filter-checkbox::before  {
+.checkbox-item:focus-within .filter-checkbox::before  {
   border-color: var(--basic-darkcream);
 }
 
@@ -1774,7 +1777,8 @@ a {
   background-repeat: no-repeat;
 }
 
-.checkbox-item:hover .filter-checkbox-button:checked + .filter-checkbox::before {
+.checkbox-item:hover .filter-checkbox-button:checked + .filter-checkbox::before,
+.checkbox-item:focus-within .filter-checkbox-button:checked + .filter-checkbox::before {
   background-image: url("data:image/svg+xml,%3Csvg width='27' height='23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.29 7.49L4.46 10.3l7.78 7.79L26.17 4.17l-2.83-2.83-11.1 11.1-4.95-4.95z' fill='%23B5B5B5'/%3E%3Cpath d='M21 20c0 .54-.46 1-1 1H3c-.54 0-1-.46-1-1V3c0-.54.46-1 1-1h16.9L21.5.42A2.96 2.96 0 0020 0H3a3 3 0 00-3 3v17a3 3 0 003 3h17a3 3 0 003-3v-9.83l-2 2V20z' fill='%23B5B5B5'/%3E%3C/svg%3E");
 }
 
@@ -1811,7 +1815,7 @@ a {
 }
 
 .radio-item:hover .filter-radio::before,
-.radio-item:focus .filter-radio::before  {
+.radio-item:focus-within .filter-radio::before  {
   box-shadow: 0 0 0 4px var(--basic-darkcream);
 }
 
@@ -1823,7 +1827,8 @@ a {
   background-color: var(--basic-greylight);
 }
 
-.radio-item:hover .filter-radio-button:checked + .filter-radio::before {
+.radio-item:hover .filter-radio-button:checked + .filter-radio::before,
+.radio-item:focus-within .filter-radio-button:checked + .filter-radio::before {
   background-color: var(--basic-darkcream);
 }
 
@@ -1983,7 +1988,9 @@ a {
 }
 
 .footer-navigation li:hover,
-.feedback-link:hover {
+.footer-navigation li:focus-within,
+.feedback-link:hover,
+.feedback-link:focus {
   text-decoration: underline;
 }
 
@@ -2031,7 +2038,7 @@ a {
 
 .social-list > li:hover .social-item-background,
 .social-list > li:active .social-item-background,
-.social-list > li:focus .social-item-background {
+.social-list > li:focus-within .social-item-background {
   fill: var(--basic-red);
 }
 

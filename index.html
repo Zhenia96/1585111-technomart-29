@@ -41,7 +41,7 @@
         <address class="header-address"><span class="visually-hidden">Наш адрес:</span>г. Санкт-Петербург, ул.
           Б. Конюшенная, д. 19/8</address>
       </div>
-      <div class="user-menu login-menu current-menu">
+      <div class="user-menu login-menu current">
         <a class="login-button login-button-sign-in" href="" aria-label="Войти в аккаунт">
           <svg aria-hidden="true" focusable="false" class="icon-sign-in" width="20" height="17" fill="none"
             xmlns="http://www.w3.org/2000/svg">
@@ -101,47 +101,50 @@
     <section class="container promo-container">
       <h2 class="visually-hidden">Промо-блок</h2>
       <ul class="list promo-list">
-        <li class="materials promo-list-image">
+        <li class="materials promo-item promo-list-image">
           <h3>Материалы</h3>
           <div class="new"><em>New</em></div>
           <a class="button promo-list-button" href="">На любой вкус</a>
         </li>
-        <li class="tools promo-list-image">
+        <li class="tools promo-item promo-list-image">
           <h3>Инструмент</h3>
           <a class="button promo-list-button" href="">На все случаи</a>
         </li>
-        <li class="appliances promo-list-image">
+        <li class="appliances promo-item promo-list-image">
           <h3>Техника</h3>
           <a class="button promo-list-button" href="">Для стройки</a>
         </li>
-        <li class="discount promo-list-image">
+        <li class="discount promo-item promo-list-image">
           <h3>Скидки 50%</h3>
           <a class="button promo-list-button" href="">На 350 Товаров</a>
         </li>
-        <li class="delivery promo-list-image">
+        <li class="delivery promo-item promo-list-image">
           <h3>Доставка</h3>
           <a class="button promo-list-button" href="">Бесплатно</a>
         </li>
         <li class="promo-slider">
-          <div class="promo-slider-wrapper current-slide">
-            <h3>Перфораторы</h3>
-            <p>Настоящие мужские игрушки</p>
-            <a class="button main-page-button promo-slider-button" href="catalog.html">Открыть каталог</a>
-            <img width="620" height="266" src="img/content/slider/Layer99.jpg" alt="Строитель работает с перфоратором">
-          </div>
-          <div class="promo-slider-wrapper">
-            <h3>Дрели</h3>
-            <p>Соседям на радость!</p>
-            <a class="button main-page-button promo-slider-button" href="catalog.html">Открыть каталог</a>
-            <img width="620" height="266" src="img/content/slider/Layer98.jpg" alt="Строитель работает с дрелью">
-          </div>
+          <ul class="list promo-slider-list">
+            <li class="promo-slider-slide current">
+              <h3>Перфораторы</h3>
+              <p>Настоящие мужские игрушки</p>
+              <a class="button main-page-button promo-slider-button" href="catalog.html">Открыть каталог</a>
+              <img width="620" height="266" src="img/content/slider/Layer99.jpg"
+                alt="Строитель работает с перфоратором">
+            </li>
+            <li class="promo-slider-slide">
+              <h3>Дрели</h3>
+              <p>Соседям на радость!</p>
+              <a class="button main-page-button promo-slider-button" href="catalog.html">Открыть каталог</a>
+              <img width="620" height="266" src="img/content/slider/Layer98.jpg" alt="Строитель работает с дрелью">
+            </li>
+          </ul>
           <div class="promo-slider-control">
             <button class="slider-button slider-button-back" type="button" aria-label="Предыдущий слайд"></button>
             <button class="slider-button slider-button-next" type="button" aria-label="Следующий слайд"></button>
           </div>
           <div class="promo-slider-pagination">
+            <div class="promo-slider-pagination-item current"></div>
             <div class="promo-slider-pagination-item"></div>
-            <div class="promo-slider-pagination-item current-pagination-item"></div>
           </div>
         </li>
       </ul>
@@ -277,12 +280,12 @@
           </p>
         </header>
         <ul class="list services-button-list">
-          <li><button class="services-button current-button" type="button" aria-current="true">Доставка</button></li>
+          <li><button class="services-button current" type="button" aria-current="true">Доставка</button></li>
           <li><button class="services-button" type="button">Гарантия</button></li>
           <li><button class="services-button" type="button">Кредит</button></li>
         </ul>
         <ul class="list services-list">
-          <li class="services-item services-item-delivery current-item">
+          <li class="services-item services-item-delivery current">
             <h3 class="title">Доставка</h3>
             <p>Мы с удовольствием доставим ваш товар прямо<br>
               к вашему подъезду совершенно бесплатно!<br>
@@ -327,9 +330,9 @@
         <h2 class="title">Контакты</h2>
         <p>Вы можете забрать товар сами,<br>
           заехав в наш офис:</p>
-        <button class="contacts-map" type="button"><img width="300" height="158" src="img/content/minimap.jpg"
-            alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></button>
-        <button class="button main-page-button contacts-button" type="button">Заблудились? Напишите нам!</button>
+        <a class="contacts-map" href=""><img width="300" height="158" src="img/content/minimap.jpg"
+            alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></a>
+        <a class="button main-page-button contacts-button" href="">Заблудились? Напишите нам!</a>
       </section>
     </div>
   </main>
@@ -416,11 +419,11 @@
       <ul>
         <li>
           <label for="write-us-name">Ваше имя:</label>
-          <input id="write-us-name" type="text" name="userName" placeholder="Имя Фамилия">
+          <input id="write-us-name" type="text" name="user-name" placeholder="Имя Фамилия">
         </li>
         <li>
           <label for="write-us-email">Ваш e-mail:</label>
-          <input id="write-us-email" type="email" name="userEmail" placeholder="email@example.com">
+          <input id="write-us-email" type="email" name="user-email" placeholder="email@example.com">
         </li>
         <li class="user-letter">
           <label for="write-us-text">Текст письма:</label>
@@ -449,6 +452,8 @@
     </div>
     <button class="close" type="button" aria-label="Закрыть"></button>
   </section>
+
+  <script src="js/script.js"></script>
 
 </body>
 

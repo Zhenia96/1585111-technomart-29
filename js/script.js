@@ -1,31 +1,15 @@
 
-const popups = document.querySelectorAll('.modal');
-const buyButtons = document.querySelectorAll('.button-buy');
-const writeUsButton = document.querySelector('.contacts-button');
-const writeUsPopup = document.querySelector('.modal-write-us');
-const mapButton = document.querySelector('.contacts-map');
-const mapPopup = document.querySelector('.modal-map');
-const noticePopup = document.querySelector('.modal-notice');
-const promoSlides = document.querySelectorAll('.promo-slider-slide');
-const sliderPagination = document.querySelectorAll('.promo-slider-pagination-item');
-const nextButton = document.querySelector('.slider-button-next');
-const backButton = document.querySelector('.slider-button-back');
-const servicesButtons = document.querySelectorAll('.services-button');
-const servicesSlides = document.querySelectorAll('.services-item');
-
-
 // МОДАЛЬНЫЕ ОКНА
-
 
 let closePopupForClick = function (button, popup) {
   button.addEventListener('click', function () {
     popup.classList.remove('modal-show');
-  });
+  })
   document.addEventListener('keydown', function (evt) {
     if (evt.keyCode === 27) {
       popup.classList.remove('modal-show');
     }
-  });
+  })
 }
 
 let closePopups = function (popups) {
@@ -50,21 +34,35 @@ let showPopups = function (buttons, popup) {
   }
 }
 
-if (mapPopup) {
+if (document.querySelector('.contacts-map')) {
+  const mapButton = document.querySelector('.contacts-map');
+  const mapPopup = document.querySelector('.modal-map');
+
   let showMapPopup = showPopupForClick(mapButton, mapPopup);
   showMapPopup;
 }
 
-let showNoticePopup = showPopups(buyButtons, noticePopup);
-showNoticePopup;
+if (document.querySelector('.button-buy')) {
+  const buyButtons = document.querySelectorAll('.button-buy');
+  const noticePopup = document.querySelector('.modal-notice');
 
-closePopups(popups);
+  let showNoticePopup = showPopups(buyButtons, noticePopup);
+  showNoticePopup;
+}
+
+if (document.querySelector('.modal')) {
+  const popups = document.querySelectorAll('.modal');
+
+  closePopups(popups);
+}
 
 
 // ОБРАТНАЯ СВЯЗЬ
 
 
-if (writeUsPopup) {
+if (document.querySelector('.modal-write-us')) {
+  const writeUsButton = document.querySelector('.contacts-button');
+  const writeUsPopup = document.querySelector('.modal-write-us');
   const writeUsForm = writeUsPopup.querySelector('form');
   const writeUsUserName = writeUsPopup.querySelector('[name=user-name]');
   const writeUsUserEmail = writeUsPopup.querySelector('[name=user-email]');
@@ -115,66 +113,74 @@ if (writeUsPopup) {
 
 // ПРОМО-СЛАЙДЕР
 
+if (document.querySelector('.promo-slider')) {
+  const promoSlides = document.querySelectorAll('.promo-slider-slide');
+  const sliderPagination = document.querySelectorAll('.promo-slider-pagination-item');
+  const nextButton = document.querySelector('.slider-button-next');
+  const backButton = document.querySelector('.slider-button-back');
 
-let switchElement = function (element) {
-  element.classList.toggle('current');
+  let switchElement = function (element) {
+    element.classList.toggle('current');
+  }
+
+  let switchSlide = function (slide, paginationItem) {
+    switchElement(slide);
+    switchElement(paginationItem);
+  }
+
+  let switchPromoSlide = function () {
+    let counter = 0;
+    let sliderSize = promoSlides.length - 1;
+    nextButton.addEventListener('click', function () {
+      if (counter < sliderSize) {
+        switchSlide(promoSlides[counter], sliderPagination[counter]);
+        counter++;
+        switchSlide(promoSlides[counter], sliderPagination[counter]);
+      }
+    })
+    backButton.addEventListener('click', function () {
+      if (counter > 0) {
+        switchSlide(promoSlides[counter], sliderPagination[counter]);
+        counter--;
+        switchSlide(promoSlides[counter], sliderPagination[counter]);
+      }
+    })
+  }
+  switchPromoSlide();
 }
-
-let switchSlide = function (slide, paginationItem) {
-  switchElement(slide);
-  switchElement(paginationItem);
-}
-
-let switchPromoSlide = function () {
-  let counter = 0;
-  let sliderSize = promoSlides.length - 1;
-  nextButton.addEventListener('click', function () {
-    if (counter < sliderSize) {
-      switchSlide(promoSlides[counter], sliderPagination[counter]);
-      counter++;
-      switchSlide(promoSlides[counter], sliderPagination[counter]);
-    }
-  })
-  backButton.addEventListener('click', function () {
-    if (counter > 0) {
-      switchSlide(promoSlides[counter], sliderPagination[counter]);
-      counter--;
-      switchSlide(promoSlides[counter], sliderPagination[counter]);
-    }
-  })
-}
-
-switchPromoSlide();
 
 
 // СЕРВИС СЛАЙДЕР
 
+if (document.querySelector('.services-slider')) {
+  const servicesButtons = document.querySelectorAll('.services-button');
+  const servicesSlides = document.querySelectorAll('.services-item');
 
-let closeAllElements = function (elements) {
-  for (let counter = 0; counter < elements.length; counter++) {
-    let currentElement = elements[counter];
-    currentElement.classList.remove('current');
+  let closeAllElements = function (elements) {
+    for (let counter = 0; counter < elements.length; counter++) {
+      let currentElement = elements[counter];
+      currentElement.classList.remove('current');
+    }
   }
-}
 
-let openSlide = function (button, slide) {
-  button.addEventListener('click', function () {
-    closeAllElements(servicesButtons);
-    closeAllElements(servicesSlides);
-    button.classList.add('current');
-    slide.classList.add('current');
-  })
-}
-
-let openServicesSlide = function () {
-  for (let counter = 0; counter < servicesButtons.length; counter++) {
-    let currentButton = servicesButtons[counter];
-    let currentSlide = servicesSlides[counter];
-    openSlide(currentButton, currentSlide);
+  let openSlide = function (button, slide) {
+    button.addEventListener('click', function () {
+      closeAllElements(servicesButtons);
+      closeAllElements(servicesSlides);
+      button.classList.add('current');
+      slide.classList.add('current');
+    })
   }
-}
 
-openServicesSlide();
+  let openServicesSlide = function () {
+    for (let counter = 0; counter < servicesButtons.length; counter++) {
+      let currentButton = servicesButtons[counter];
+      let currentSlide = servicesSlides[counter];
+      openSlide(currentButton, currentSlide);
+    }
+  }
+  openServicesSlide();
+}
 
 
 

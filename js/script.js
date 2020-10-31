@@ -1,7 +1,7 @@
+//  ФУНКЦИИ
 
-// МОДАЛЬНЫЕ ОКНА
 
-let closePopupForClick = function (button, popup) {
+let closePopupOnClick = function (button, popup) {
   button.addEventListener('click', function () {
     popup.classList.remove('modal-show');
   })
@@ -16,11 +16,11 @@ let closePopups = function (popups) {
   for (let counter = 0; counter < popups.length; counter++) {
     let currentPopup = popups[counter];
     let currentCloseButton = currentPopup.querySelector('.close');
-    closePopupForClick(currentCloseButton, currentPopup);
+    closePopupOnClick(currentCloseButton, currentPopup);
   }
 }
 
-let showPopupForClick = function (button, popup) {
+let showPopupOnClick = function (button, popup) {
   button.addEventListener('click', function (evt) {
     evt.preventDefault();
     popup.classList.add('modal-show');
@@ -30,25 +30,77 @@ let showPopupForClick = function (button, popup) {
 let showPopups = function (buttons, popup) {
   for (let counter = 0; counter < buttons.length; counter++) {
     let currentButton = buttons[counter];
-    showPopupForClick(currentButton, popup);
+    showPopupOnClick(currentButton, popup);
   }
 }
+
+let addGoodOnClick = function (button, place, goodsField) {
+  button.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    let currentGoodsCount = goodsField.textContent;
+    currentGoodsCount++;
+    if (currentGoodsCount > 0) {
+      place.classList.add('containing');
+    }
+    goodsField.textContent = currentGoodsCount;
+  })
+}
+
+let addGood = function (buttons, place, goodsField) {
+  for (let counter = 0; counter < buttons.length; counter++) {
+    let currentButton = buttons[counter];
+    addGoodOnClick(currentButton, place, goodsField);
+  }
+}
+
+let switchElement = function (element) {
+  element.classList.toggle('current');
+}
+
+
+// КАРТА
+
 
 if (document.querySelector('.contacts-map')) {
   const mapButton = document.querySelector('.contacts-map');
   const mapPopup = document.querySelector('.modal-map');
 
-  let showMapPopup = showPopupForClick(mapButton, mapPopup);
+  let showMapPopup = showPopupOnClick(mapButton, mapPopup);
   showMapPopup;
 }
+
+
+// ДОБАВЛЕНИЕ В КОРЗИНУ
+
 
 if (document.querySelector('.button-buy')) {
   const buyButtons = document.querySelectorAll('.button-buy');
   const noticePopup = document.querySelector('.modal-notice');
+  const cart = document.querySelector('.cart');
+  const goodsInCart = document.querySelector('.cart .count');
 
+  let addGoodToCart = addGood(buyButtons, cart, goodsInCart);
+  addGoodToCart;
   let showNoticePopup = showPopups(buyButtons, noticePopup);
   showNoticePopup;
 }
+
+
+// ДОБАВЛЕНИЕ В ЗАКЛАДКИ
+
+
+if (document.querySelector('.button-to-bookmark')) {
+  const bookmarkButtons = document.querySelectorAll('.button-to-bookmark');
+  const bookmark = document.querySelector('.bookmark');
+  const goodsInBookmark = document.querySelector('.bookmark .count');
+
+  let addGoodToBookmark = addGood(bookmarkButtons, bookmark, goodsInBookmark);
+  addGoodToBookmark;
+}
+
+
+// ЗАКРЫТИЕ ПОПАПОВ
+
 
 if (document.querySelector('.modal')) {
   const popups = document.querySelectorAll('.modal');
@@ -113,15 +165,12 @@ if (document.querySelector('.modal-write-us')) {
 
 // ПРОМО-СЛАЙДЕР
 
+
 if (document.querySelector('.promo-slider')) {
   const promoSlides = document.querySelectorAll('.promo-slider-slide');
   const sliderPagination = document.querySelectorAll('.promo-slider-pagination-item');
   const nextButton = document.querySelector('.slider-button-next');
   const backButton = document.querySelector('.slider-button-back');
-
-  let switchElement = function (element) {
-    element.classList.toggle('current');
-  }
 
   let switchSlide = function (slide, paginationItem) {
     switchElement(slide);
@@ -151,6 +200,7 @@ if (document.querySelector('.promo-slider')) {
 
 
 // СЕРВИС СЛАЙДЕР
+
 
 if (document.querySelector('.services-slider')) {
   const servicesButtons = document.querySelectorAll('.services-button');
@@ -183,8 +233,20 @@ if (document.querySelector('.services-slider')) {
 }
 
 
+// ВЫХОД НА СТРАНИЦУ ДЕАВТОРИЗАЦИИ.
 
 
+if (document.querySelector('.user-menu')) {
+  const activatiedUserMenu = document.querySelector('.activatied-user-menu');
+  const loginMenu = document.querySelector('.login-menu');
+  const logOutButton = document.querySelector('.log-out');
+
+  logOutButton.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    switchElement(activatiedUserMenu);
+    switchElement(loginMenu);
+  })
+}
 
 
 

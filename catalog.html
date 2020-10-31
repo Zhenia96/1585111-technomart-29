@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/normalize-min.css" rel="stylesheet">
+  <link href="css/style-min.css" rel="stylesheet">
 </head>
 
 <body class="page-body inner-page">
@@ -26,8 +26,10 @@
                 fill="#fff" />
             </svg>
           </form>
-          <a class="bookmark" href="">Закладки: 0<span class="visually-hidden">товаров</span></a>
-          <a class="cart containing" href="">Корзина: 10<span class="visually-hidden">товаров</span></a>
+          <a class="bookmark" href="">Закладки: <span class="count">0</span><span
+              class="visually-hidden">товаров</span></a>
+          <a class="cart containing" href="">Корзина: <span class="count">10</span><span
+              class="visually-hidden">товаров</span></a>
           <a class="order" href="">Оформить заказ</a>
         </div>
       </div>
@@ -84,9 +86,9 @@
       <nav class="main-navigation-container">
         <ul class="list main-navigation">
           <li><a href="index.html">Главная</a></li>
-          <li class="main-navigation-company"><a href="">Компания</a></li>
+          <li class="main-navigation-option-1"><a href="">Компания</a></li>
           <li><a href="#">Каталог</a></li>
-          <li><a href="">Новости</a></li>
+          <li class="main-navigation-option-1"><a href="">Новости</a></li>
           <li><a href="">Спецпредложения</a></li>
           <li><a href="">Доставка</a></li>
           <li class="main-navigation-contacts"><a href="">Контакты</a></li>
@@ -361,7 +363,8 @@
         <h2 class="title about-products-title">Пара слов о перфораторах</h2>
         <p>Перфоратор &ndash; универсальный строительный инструмент. Предназначен для
           сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
-          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели,
+          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции
+          дрели,
           шуруповерта и отбойного молотка.<br>
           В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и
           ударная дрель.</p>
@@ -384,13 +387,13 @@
         <li class="footer-navigation-item"><a href="">Компания</a></li>
         <li class="footer-navigation-item"><a href="">Новости</a></li>
         <li class="footer-navigation-item"><a href="#">Каталог</a></li>
-        <li class="footer-navigation-item"><a href="">Доставка</a></li>
+        <li class="footer-navigation-item footer-delivery"><a href="">Доставка</a></li>
         <li class="footer-navigation-item"><a href="">Контакты</a></li>
       </ul>
       <ul class="list footer-navigation special-navigation">
         <li class="footer-navigation-item special-navigation-item"><a href="">Материалы</a></li>
         <li class="footer-navigation-item special-navigation-item"><a href="">Техника</a></li>
-        <li class="footer-navigation-item special-navigation-item"><a href="">Инструмент</a></li>
+        <li class="footer-navigation-item special-navigation-item footer-tool"><a href="">Инструмент</a></li>
         <li class="footer-navigation-item special-navigation-item"><a href="">Спецпредложения</a></li>
       </ul>
     </div>
@@ -455,7 +458,7 @@
     <button class="close" type="button" aria-label="Закрыть"></button>
   </section>
 
-  <script src="js/script.js"></script>
+  <script src="js/script-min.js"></script>
 
 </body>
 

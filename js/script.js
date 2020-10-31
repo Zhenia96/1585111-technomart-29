@@ -153,6 +153,7 @@ if (document.querySelector('.modal-write-us')) {
     if (!writeUsUserName.value || !writeUsUserEmail.value || !writeUsText.value) {
       evt.preventDefault();
       writeUsPopup.classList.remove('error');
+      writeUsPopup.classList.remove('showingPopup');
       writeUsPopup.offsetWidth = writeUsPopup.offsetWidth;
       writeUsPopup.classList.add('error');
     } else if (isStorageSupport) {

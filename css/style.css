@@ -2,57 +2,57 @@
 
 
 @font-face {
-  font-family: 'Cuprum';
+  font-family: "Cuprum";
   font-style: normal;
   font-weight: 400;
-  src: local('Cuprum'),
-  url('../fonts/cuprum.woff2') format('woff2'),
-  url('../fonts/cuprum.woff') format('woff');
+  src: local("Cuprum"),
+  url("../fonts/cuprum.woff2") format("woff2"),
+  url("../fonts/cuprum.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Cuprum';
+  font-family: "Cuprum";
   font-style: normal;
   font-weight: 700;
-  src: local('Cuprum'),
-  url('../fonts/cuprumbold.woff2') format('woff2'),
-  url('../fonts/cuprumbold.woff') format('woff');
+  src: local("Cuprum"),
+  url("../fonts/cuprumbold.woff2") format("woff2"),
+  url("../fonts/cuprumbold.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Cuprum';
+  font-family: "Cuprum";
   font-style: italic;
   font-weight: 400;
-  src: local('Cuprum'),
-  url('../fonts/cuprumitalic.woff2') format('woff2'),
-  url('../fonts/cuprumitalic.woff') format('woff');
+  src: local("Cuprum"),
+  url("../fonts/cuprumitalic.woff2") format("woff2"),
+  url("../fonts/cuprumitalic.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Cuprum';
+  font-family: "Cuprum";
   font-style: italic;
   font-weight: 700;
-  src: local('Cuprum'),
-  url('../fonts/cuprumbolditalic.woff2') format('woff2'),
-  url('../fonts/cuprumbolditalic.woff') format('woff');
+  src: local("Cuprum"),
+  url("../fonts/cuprumbolditalic.woff2") format("woff2"),
+  url("../fonts/cuprumbolditalic.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: local('PT Sans'),
-  url('../fonts/ptsans.woff2') format('woff2'),
-  url('../fonts/ptsans.woff') format('woff');
+  src: local("PT Sans"),
+  url("../fonts/ptsans.woff2") format("woff2"),
+  url("../fonts/ptsans.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: local('PT Sans'),
-  url('../fonts/ptsansbold.woff2') format('woff2'),
-  url('../fonts/ptsansbold.woff') format('woff');
+  src: local("PT Sans"),
+  url("../fonts/ptsansbold.woff2") format("woff2"),
+  url("../fonts/ptsansbold.woff") format("woff");
 }
 
 
@@ -406,7 +406,7 @@ a {
   position: absolute;
   top: 13px;
   left: 20px;
-  content:"";
+  content: "";
   background-image: url("../img/decor/icon-bookmark.svg");
   background-repeat: no-repeat;
   opacity: 0.3;
@@ -422,7 +422,7 @@ a {
   position: absolute;
   left: 26px;
   top: 13px;
-  content:"";
+  content: "";
   background-image: url("../img/decor/icon-cart.svg");
   background-repeat: no-repeat;
   opacity: 0.3;
@@ -831,9 +831,9 @@ a {
 }
 
 .materials.promo-list-image {
- background-image: url("../img/decor/icon-1.svg");
- background-position: top 31px right 43px;
- background-size: 44px 65px;
+  background-image: url("../img/decor/icon-1.svg");
+  background-position: top 31px right 43px;
+  background-size: 44px 65px;
 }
 
 .tools.promo-list-image {
@@ -1095,10 +1095,6 @@ a {
 .products-item-button-container {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto;
-  grid-gap: 10px;
   margin: 37px 0px auto -2px;
   opacity: 0;
 }
@@ -1109,13 +1105,13 @@ a {
 }
 
 .products-item-button-container .button {
-  font-size: 14px;
-  line-height: 18px;
+  display: block;
   font-family: "Cuprum", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   width: 135px;
   box-sizing: border-box;
+  margin-bottom: 10px;
 }
 
 .button-buy {
@@ -1123,6 +1119,7 @@ a {
   text-align: left;
   background-color: var(--basic-green);
   box-shadow: inset 0px -3px 0px var(--basic-darkgreen);
+  padding-top: 10px;
   padding-left: 53px;
   border: none;
   border-radius: 2px;
@@ -1153,7 +1150,7 @@ a {
 .button-to-bookmark {
   color: var(--special-grey);
   background-color: var(--basic-white);
-  padding-top: 2px;
+  padding-top: 8px;
   border: 3px solid var(--basic-green);
 }
 
@@ -1404,7 +1401,7 @@ a {
 .services-button-list::after {
   position: absolute;
   right: 0px;
-  content:"";
+  content: "";
   background-image: url("../img/decor/shadow.png");
   background-repeat: no-repeat;
   background-size: 10px 100%;
@@ -1775,7 +1772,7 @@ a {
   position: absolute;
   top: -1px;
   left: 0px;
-  content: " ";
+  content: "";
   background-color: var(--basic-white);
   width: 19px;
   height: 19px;
@@ -1828,7 +1825,7 @@ a {
   position: absolute;
   top: 4px;
   left: 4px;
-  content: " ";
+  content: "";
   background-color: var(--basic-white);
   box-shadow: 0 0 0 4px var(--basic-greylight);
   width: 9px;
@@ -1935,7 +1932,7 @@ a {
 
 .sort-button:not(.triangle)::after {
   display: block;
-  content: '';
+  content: "";
   width: inherit;
   height: 1px;
   border-bottom: 1px dotted var(--basic-red);
@@ -2019,9 +2016,9 @@ a {
 }
 
 .special-navigation {
- padding-left: 23px;
- margin-top: 32px;
- margin-bottom: 74px;
+  padding-left: 23px;
+  margin-top: 32px;
+  margin-bottom: 74px;
 }
 
 .footer-navigation li {
@@ -2153,7 +2150,7 @@ a {
 }
 
 .modal .close::after {
- transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .modal .close::before {
@@ -2313,7 +2310,7 @@ a {
   background-color: var(--basic-white);
   width: 192px;
   padding: 11px 10px 9px 10px;
-  border: none;
+  box-sizing: border-box;
 }
 
 .modal-notice .close {
